@@ -114,7 +114,7 @@ shoot = False
 # gameloop
 run = True
 while run:
-    # while projectile is in motion
+        # while projectile is in motion
     if shoot:
         # checks projectile is moving on the screen
         if weapon.y < 750 - weapon.radius:
@@ -122,18 +122,12 @@ while run:
             po = projectiles.path(x, y, power, angle, time)
             weapon.x = po[0]
             weapon.y = po[1]
+            if (weapon.x > 750 - weapon.radius) or (weapon.x < 0 + weapon.radius):
+                power = (power * -1)/10
         else:
             # stops projectile falling off screen
             shoot = False
             weapon.y = 744
-
-        # stops projectile running off screen
-        if weapon.x > 750 - weapon.radius:
-            shoot = False
-            weapon.x = 744
-        if weapon.x < 0 + weapon.radius:
-            shoot = False
-            weapon.x = 6
 
     # line that follows off the projectile
     pos = pygame.mouse.get_pos()
