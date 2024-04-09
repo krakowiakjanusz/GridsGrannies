@@ -403,6 +403,7 @@ while run:
                 if (computerHitX == playerX1 and computerHitY == playerY1) or (computerHitX == playerX2 and computerHitY == playerY2) or (computerHitX == playerX3 and computerHitY == playerY3) or (computerHitX == playerX4 and computerHitY == playerY4) or (computerHitX == playerX5 and computerHitY == playerY5):
                     print("you have been hit in one of your coordinate")
                     computerHitCounter += 1
+                    print("The computer's hit counter is now at " + str(computerHitCounter))
                     if computerHitCounter == 5:
                         print("the computer has hit you 5 times, you have lost")
                         bg = menu
@@ -422,7 +423,7 @@ while run:
                     if (playerXCord == computerX1 and computerY1 == landing_segment) or (playerXCord == computerX2 and computerY2 == landing_segment) or (playerXCord == computerX3 and computerY3 == landing_segment) or (playerXCord == computerX4 and computerY4 == landing_segment) or (playerXCord == computerX5 and computerY5 == landing_segment):
                         print('hit!')
                         playerHitCounter += 1
-
+                        print("your hit counter is now at " + str(playerHitCounter))
                         if playerHitCounter == 5:
                             print("you have won")
                             bg = menu
