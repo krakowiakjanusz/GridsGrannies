@@ -13,7 +13,7 @@ width = 750
 height = 750
 # Display window setup
 window = pygame.display.set_mode((width, height))
-pygame.display.set_caption('Projectile Bouncing otherball')
+pygame.display.set_caption('Grids Grannies and Gratuitous Violence')
 
 # variable to store the selected side
 selectedSide=""  
@@ -619,11 +619,6 @@ while run:
                 window.blit(sucsessfullThrow1, (width // 2 - sucsessfullThrow1.get_width() // 2, height// 3 + sucsessfullThrow1.get_height()))
             else:
                 window.blit(unsucsessfullThrow, (width //2 - unsucsessfullThrow.get_width() // 2, height // 3 - unsucsessfullThrow.get_height() // 2))
-
-    weapon.update()
-    pygame.display.update()
-    clock.tick(60)
-pygame.quit()
 
     weapon.update()
     pygame.display.update()
